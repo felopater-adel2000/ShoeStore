@@ -18,7 +18,7 @@ This project will consist of five screens.
 ### Screenshots
 
 * Login Screen
-![Login Screen] (Screenshot/login.jpg)
+![Login Screen] (screenshot/login.jpg)
 
 * Welcome Screen 
 ![Welcome Screen] (Screenshot/welcome.jpg)
