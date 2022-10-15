@@ -18,17 +18,17 @@ This project will consist of five screens.
 ### Screenshots
 
 * Login Screen
-![Login Screen] (screenshot/login.jpg)
+![LoginScreen](screenshot/login.jpg )
 
 * Welcome Screen 
-![Welcome Screen] (Screenshot/welcome.jpg)
+![WelcomeScreen](screenshot/welcome.jpg)
 
 * Instruction Screen
-![Welcome Screen] (Screenshot/inst.jpg)
+![WelcomeScreen](screenshot/inst.jpg)
 
 * Listing Screen
-![Welcome Screen] (Screenshot/listing.jpg)
+![WelcomeScreen](screenshot/listing.jpg)
 
 * Details Screen
-![Details Screen](Screenshot/Details.jpg)
+![DetailsScreen](screenshot/Details.jpg)
   ![] (Screenshot/adding.jpg)
