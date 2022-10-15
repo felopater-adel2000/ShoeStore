@@ -10,12 +10,12 @@ This project will consist of five screens.
 4. Shoe Listing screen
 5. Shoe Detail screen for adding a new shoe
 
-###This Project use:
+### This Project use:
 * Navigation Component
 * LinearLayout and ConstraintLayout for design
 * MVVM Pattern
 
-#Screenshots
+### Screenshots
 
 * Login Screen
   ![Login Screen](Screenshot/login.jpg)
