@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    listing fragment that contain:-->
+<!--        nested LinearLayout in  ScrollView that contain all shoes-->
+<!--        FloatingActionButton to navigate to Details fragment to add new shoe with to appears in bottom and end of screen-->
+<!--    use CoordinatorLayout as a root layout To make the FloatingActionButton appear on the ScrollView-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/appPadding_p16">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".screens.store.ListingFragment">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_addShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/appMargin_m16"
+            android:layout_gravity="end|bottom"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/add"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    Details Fragment contain 5 line, every line in LinearLyout with a horizontal shape:-->
+<!--        line 1 contain label and EditText for shoe name field-->
+<!--        line 2 contain label and EditText for shoe size field-->
+<!--        line 3 contain label and EditText for shoe company field-->
+<!--        line 4 contain label and EditText for shoe description field-->
+<!--        line 5 contain 2 button -> Cancel and Save Button-->
+
+<!--    user LinearLayout as root Layout to use vertical shape-->
+    <data>
+        <variable
+            name="tempShoe"
+            type="com.udacity.shoestore.models.TempShoe" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.store.DetailsFragment"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/appPadding_p16">
+
+<!--        line 1 for shoe name field-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/appMargin_m16">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                style="@style/onboarding_text_body"/>
+            <EditText
+                android:id="@+id/et_name"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={tempShoe.name}"/>
+
+        </LinearLayout>
+
+<!--        line 2 for shoe size field-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/appMargin_m16">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size"
+                style="@style/onboarding_text_body"/>
+            <EditText
+                android:id="@+id/et_size"
+                android:inputType="numberDecimal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={tempShoe.size}"/>
+        </LinearLayout>
+
+<!--        line 3 for Company field-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/appMargin_m16">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                style="@style/onboarding_text_body"/>
+            <EditText
+                android:id="@+id/et_company"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={tempShoe.company}"/>
+        </LinearLayout>
+
+<!--        line 4 for description field-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/appMargin_m16">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                style="@style/onboarding_text_body"/>
+            <EditText
+                android:id="@+id/et_description"
+                android:inputType="text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@={tempShoe.description}"/>
+        </LinearLayout>
+
+<!--        Error message -> input all data-->
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginBottom="@dimen/appMargin_m16"/>
+
+<!--        line 5 for 2 button-->
+<!--        use style and background to make button with border radius-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_cansel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_marginEnd="@dimen/appMargin_m22"
+                style="@style/button"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginEnd="@dimen/appMargin_m22"
+                style="@style/button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

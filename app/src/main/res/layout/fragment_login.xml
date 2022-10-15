@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    Login Fragment is a start distination for my navigation in my App-->
+
+<!--    contain 3 basics Line, every line in LinearLayout-->
+<!--        first line contain TextView ana EditText for Email Field-->
+<!--        second line contain TextView ana EditText for Password Field-->
+<!--        third line contain 2 button for login and signup-->
+
+<!--    use ConstraintLayout root to order all elements with chain style = packed-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/appPadding_p8"
+        tools:context=".screens.login.LoginFragment">
+
+        <TextView
+            android:id="@+id/txt_login"
+            style="@style/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/appMargin_m16"
+            android:text="@string/login"
+            app:layout_constraintBottom_toTopOf="@id/emailLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+<!--        first line for email field-->
+        <LinearLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/appMargin_m16"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/passwordLayout"
+            app:layout_constraintTop_toBottomOf="@id/txt_login">
+
+            <TextView
+                style="@style/input_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/appMargin_m8"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+<!--        second line for password field-->
+        <LinearLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/appMargin_m16"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            app:layout_constraintTop_toBottomOf="@id/emailLayout">
+
+            <TextView
+                style="@style/input_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/appMargin_m8"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+<!--        error message if there is no input for EditText-->
+<!--        just for testing-->
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/passwordLayout"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Entert email and password"
+            android:layout_marginBottom="@dimen/appMargin_m16"
+            android:textColor="@color/red"/>
+
+<!--        third line for buttons-->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/appMargin_m16"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/passwordLayout">
+
+<!--            Login Button-->
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/appMargin_m22"
+                style="@style/button"
+                android:text="@string/login" />
+
+<!--            signUp Button-->
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                style="@style/button"
+                android:text="@string/new_login" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
