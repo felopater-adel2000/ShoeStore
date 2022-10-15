@@ -31,4 +31,4 @@ This project will consist of five screens.
 
 * Details Screen
 ![DetailsScreen](screenshot/details.jpg)
-![adding] (Screenshot/adding.jpg)
+![adding](Screenshot/adding.jpg)
