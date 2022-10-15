@@ -30,5 +30,5 @@ This project will consist of five screens.
 ![WelcomeScreen](screenshot/listing.jpg)
 
 * Details Screen
-![DetailsScreen](screenshot/Details.jpg)
-  ![] (Screenshot/adding.jpg)
+![DetailsScreen](screenshot/details.jpg)
+![adding] (Screenshot/adding.jpg)
